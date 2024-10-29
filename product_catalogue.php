@@ -94,6 +94,9 @@
               margin: 0px !important;
             }
           }
+            .flex-row-mobiled {
+              width: unset !important;
+            }
         </style>
 
       <div class="col s9" style="margin-bottom: 80px">
