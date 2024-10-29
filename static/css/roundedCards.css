@@ -1,0 +1,76 @@
+/* Basic styling for the rounded card with hover effect */
+.rounded-card-parent {
+  box-shadow: white 4px 4px 8px 2px;
+  border-radius: 50px;
+  transition: 0.3s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.rounded-card-parent:hover {
+  border-radius: 20px;
+}
+
+.rounded-card {
+  color: white;
+  padding: 30px;
+  height: 100%; /* Allow cards to stretch to the parent height */
+  clip-path: inset(0px 0px round 50px 50px);
+  background-color: rgba(56, 56, 56, 0.7);
+  backdrop-filter: blur(10px);
+  transition: 0.3s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.rounded-card:hover {
+  clip-path: inset(0px 0px round 20px 20px);
+}
+
+.rounded-card.tint-glass-black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rounded-card.tint-glass-cyan {
+  background-color: rgba(0, 170, 200, 0.5);
+}
+
+.rounded-card.tint-glass-brown {
+  background-color: rgba(128, 73, 0, 0.5);
+}
+
+.rounded-card.blurer {
+  backdrop-filter: blur(20px);
+}
+
+/* Ensure images are responsive */
+.card-img-top {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjustments for small devices */
+@media (max-width: 576px) {
+  .rounded-card {
+    padding: 20px; /* Reduce padding on small screens */
+  }
+  h5 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+}
+
+/* Adjustments for medium devices */
+@media (min-width: 576px) and (max-width: 768px) {
+  .rounded-card {
+    padding: 25px; /* Slightly increase padding for small tablets */
+  }
+  h5 {
+    font-size: 1.3rem; /* Adjust font size */
+  }
+}
+
+/* Adjustments for larger devices */
+@media (min-width: 768px) {
+  .rounded-card {
+    padding: 30px; /* Maintain original padding for larger screens */
+  }
+  h5 {
+    font-size: 1.4rem; /* Increase font size */
+  }
+}

@@ -1,0 +1,187 @@
+/* square card boxes
+.selectable-card {
+  min-height: 350px;
+  background-color: black;
+  box-shadow: white 4px 4px 8px 2px;
+  backdrop-filter: blur(15px);
+  transition: 0.2s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.selectable-card img {
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
+  border: none;
+  margin-top: 0;
+}
+
+#no-hover:hover {
+  box-shadow: white 4px 4px 8px 2px;
+  transition: 0.2s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.selectable-card:hover {
+  box-shadow: rgb(255, 44, 6) 8px 8px 24px 4px;
+}
+
+.selectable-card.tint-glass-cyan {
+  background-color: rgba(0, 170, 200, 0.5);
+}
+
+.selectable-card.tint-glass-black {
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+/* square card boxes */
+/* Selectable cards for categories */
+
+/* Selectable cards for categories */
+/* Base styles for selectable cards */
+.selectable-card {
+  background-color: black;
+  box-shadow: 4px 4px 8px 2px white;
+  backdrop-filter: blur(15px);
+  transition: 0.2s cubic-bezier(0.8, 0, 0.2, 1);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width by default */
+  max-width: 320px; /* Maximum width for cards */
+  margin: 20px auto; /* Center the cards */
+}
+
+/* Card images with larger size and rounded corners */
+.card-image {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Increased image height */
+  object-fit: cover; /* Keep aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px;
+}
+
+/* Card title styling */
+.selectable-card h5 {
+  font-size: 1.2rem;
+  margin-top: auto;
+  color: white;
+}
+
+/* Hover effect for cards */
+.selectable-card:hover {
+  box-shadow: 8px 8px 24px 4px rgba(255, 44, 6, 0.7);
+}
+
+/* Background tint colors */
+.tint-glass-black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tint-glass-cyan {
+  background-color: rgba(0, 170, 200, 0.5);
+}
+
+/* Layout for category cards using flexbox */
+.category-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds gap between cards */
+  padding: 0 20px; /* Adds padding on left and right */
+}
+
+/* Responsive adjustments */
+
+/* For large screens (desktops) */
+@media (min-width: 1025px) {
+  .selectable-card {
+    max-width: 320px; /* Max width for large screens */
+  }
+
+  .category-row {
+    justify-content: center;
+  }
+}
+
+/* For medium screens (tablets and small desktops) */
+@media (max-width: 1024px) {
+  .selectable-card {
+    min-height: 280px;
+    margin: 15px auto;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+/* For small screens (large phones, small tablets) */
+@media (max-width: 768px) {
+  .selectable-card {
+    width: 90%; /* Take 90% of the container width */
+    margin: 20px auto;
+    min-height: 260px;
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .category-row {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+}
+
+/* For extra small screens (phones) */
+@media (max-width: 480px) {
+  .selectable-card {
+    width: 100%; /* Take full width on mobile */
+    margin: 10px auto;
+    min-height: 240px;
+  }
+
+  .card-image {
+    height: 140px; /* Smaller height for small devices */
+  }
+
+  .selectable-card h5 {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+}
+
+/* =============================================================================================== */
+
+/* ========================================================== */
+
+/* cart cards */
+.collapsible-card {
+  color: white;
+  background-color: rgba(0, 52, 63, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.collapsible-card:hover {
+  box-shadow: black 4px 4px 20px 2px;
+}
+
+/* cart titles */
+.title-card {
+  color: white;
+  padding: 20px;
+  background-color: rgba(56, 56, 56, 0.7);
+  border-radius: 20px;
+  box-shadow: black 4px 4px 8px 2px;
+  backdrop-filter: blur(15px);
+  transition: 0.2s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.payable-cards {
+  background-color: white;
+  box-shadow: 0px 0px 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
