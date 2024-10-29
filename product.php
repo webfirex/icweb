@@ -91,7 +91,8 @@
           </div>
           <div class="col s8 half-width full-width">
             <div class="row" style="width:100%">
-              <table class="responsive-t" style="width:100%">
+              <table class="responsive-t" style="width:100%;display: flex;
+flex-direction: column;">
                 <tbody>
                   <tr><h4 class="white-text"><?php echo($name); ?></h4></tr>
                   <tr>
@@ -135,12 +136,14 @@
                   </tr>
                   <h4 class="amber-text"><?php echo($displayPrice); ?></h4>
                   <tr><th class='grey-text'>Brand: </th><td><?php echo($brand); ?></td></tr>
-                  <tr style="width:100%;"><th class='grey-text'>Description: </th>
-                    <td style="width:100%;display:flex;flex-wrap">
+                  <tr style="width:100%;display: flex;
+flex-direction: column;
+align-items: baseline;"><th class='grey-text'>Description: </th>
+                    <td style="width:100%;display:flex;flex-wrap;padding-top:0px;">
                       <?php 
                         $pTagDesc = explode(",", $description); 
-                        foreach ($pTagDesc as $pDesc) {
-                          echo "<p style='width:50%;text-wrap:wrap;max-width:;overflow-x:scroll'>$pDesc</p>";
+                        foreach ($pTagDesc as $pDesc) { 
+                          echo "<p style='width:100%;overflow-wrap:break-word;'>$pDesc</p>";
                         }
                       ?>
                     </td>
@@ -157,8 +160,8 @@
                 <i class="material-icons">remove</i>
               </button>
 
-              <input id="qty" class="white-text" type="number" disabled
-                style="padding: 10px; width: 5%;" value=0></input>
+              <input id="qty" class="white-text" type="text" disabled
+                style="padding: 10px; width: 5%;" value=1></input>
               <input id="sync-qty" name="qty" class="white-text" type="hidden" value=0></input>
 
               <button type="button" class="btn-small waves-effect waves-light green"
